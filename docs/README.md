@@ -50,7 +50,7 @@ Nosso objetivo é criar uma ferramenta poderosa para organizadores de eventos, e
 💾 **2. Clone o projeto**
 
 ```bash
- git clone https://github.com/OscarFlaviojr/komunity.git
+ git clone https://github.com/OscarFlaviojr/kommunity.git
 ```
 
 ⚙️ **3. Instale as dependências**
