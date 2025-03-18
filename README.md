@@ -28,7 +28,7 @@ Totalmente **gratuito, colaborativo e open-source**. Junte-se a nós e ajude a c
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-O **Komunity** é desenvolvido com uma stack moderna para garantir escalabilidade e performance, para isso, estamos buscando as tecnologias que melhor nos atendem!
+O **Komunity** é pensado para se tornar um game-changer, para isso, estamos buscando as tecnologias que melhor nos atendem!
 
 *(O projeto está em constante evolução! Sinta-se livre para contribuir 🤝)*
 
