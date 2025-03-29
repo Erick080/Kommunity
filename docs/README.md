@@ -1,4 +1,5 @@
 # Kommunity - O Organizador de Eventos Open-Source 🚀
+<img src=https://imgur.com/a/28kM4UP>
 
 Bem-vindo ao **Komunity**, a plataforma open-source definitiva para a criação e compartilhamento de eventos públicos! 🎉
 
