@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kommunity
+    # O spring quando executado pelo maven nao carrega variaveis declaradas em .env aqui por algum motivo, por isso a gambiarra 
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
