@@ -8,3 +8,13 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      data-location: classpath*:data.sql
+      mode: always
+    
+logging:
+  level:
+    org.springframework.boot.sql.init: DEBUG
