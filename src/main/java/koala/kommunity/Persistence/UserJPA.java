@@ -1,6 +1,7 @@
 package koala.kommunity.Persistence;
 
 import jakarta.persistence.*;
+import koala.kommunity.DTOs.User.EnumUserRole;
 
 @Entity
 @Table(name = "users")
@@ -13,9 +14,6 @@ public class UserJPA {
     @Column(nullable = false)
     private String name;
     
-    @Column(name = "photo")
-    private String photo;
-    
     @Column(nullable = false, unique = true)
     private String email;
     
@@ -24,18 +22,12 @@ public class UserJPA {
     
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserRole role;
-    
-    public enum UserRole {
-        USER,
-        ADMIN
-    }
+    private EnumUserRole role;
     
     public UserJPA() {}
     
-    public UserJPA(String name, String photo, String email, String password, UserRole role) {
+    public UserJPA(String name, String email, String password, EnumUserRole role) {
         this.name = name;
-        this.photo = photo;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -51,14 +43,6 @@ public class UserJPA {
     
     public void setName(String name) {
         this.name = name;
-    }
-    
-    public String getPhoto() {
-        return photo;
-    }
-    
-    public void setPhoto(String photo) {
-        this.photo = photo;
     }
     
     public String getEmail() {
@@ -77,11 +61,11 @@ public class UserJPA {
         this.password = password;
     }
     
-    public UserRole getRole() {
+    public EnumUserRole getRole() {
         return role;
     }
     
-    public void setRole(UserRole role) {
+    public void setRole(EnumUserRole role) {
         this.role = role;
     }
 }

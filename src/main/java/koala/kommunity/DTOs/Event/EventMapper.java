@@ -1,4 +1,4 @@
-package koala.kommunity.DTOs;
+package koala.kommunity.DTOs.Event;
 
 import koala.kommunity.Persistence.EventJPA;
 

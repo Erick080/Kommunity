@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
-import koala.kommunity.DTOs.CreateEventRequest;
-import koala.kommunity.DTOs.EventResponse;
+import koala.kommunity.DTOs.Event.CreateEventRequest;
+import koala.kommunity.DTOs.Event.EventResponse;
 import koala.kommunity.Services.EventService;
 
 @RestController

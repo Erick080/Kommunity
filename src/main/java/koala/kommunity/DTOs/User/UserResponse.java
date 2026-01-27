@@ -1,4 +1,4 @@
-package koala.kommunity.DTOs;
+package koala.kommunity.DTOs.User;
 
 public class UserResponse {
     

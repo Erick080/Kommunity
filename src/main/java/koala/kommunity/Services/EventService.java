@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import koala.kommunity.DTOs.CreateEventRequest;
-import koala.kommunity.DTOs.EventMapper;
-import koala.kommunity.DTOs.EventResponse;
+import koala.kommunity.DTOs.Event.CreateEventRequest;
+import koala.kommunity.DTOs.Event.EventMapper;
+import koala.kommunity.DTOs.Event.EventResponse;
 import koala.kommunity.Persistence.EventJPA;
 import koala.kommunity.Persistence.EventRepository;
 
