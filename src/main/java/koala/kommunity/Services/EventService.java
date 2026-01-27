@@ -6,8 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import koala.kommunity.DTOs.CreateEventRequest;
 import koala.kommunity.DTOs.EventMapper;
 import koala.kommunity.DTOs.EventResponse;
+import koala.kommunity.Persistence.EventJPA;
 import koala.kommunity.Persistence.EventRepository;
 
 @Service
@@ -29,5 +31,11 @@ public class EventService {
     public Optional<EventResponse> searchByName(String name){
         return eventRepository.findByNameIgnoreCase(name)
                 .map(EventMapper::toReponse);
+    }
+
+    public EventResponse createEvent(CreateEventRequest request){
+        EventJPA eventJPA = EventMapper.toJPA(request);
+        EventJPA savedEvent = eventRepository.save(eventJPA);
+        return EventMapper.toReponse(savedEvent);
     }
 }

@@ -11,4 +11,13 @@ public class EventMapper {
             eventJPA.getDescription()
         );
     }
+
+    public static EventJPA toJPA(CreateEventRequest request) {
+        return new EventJPA(
+            request.getName(),
+            request.getDate(),
+            request.getPlace(),
+            request.getDescription()
+        );
+    }
 }
