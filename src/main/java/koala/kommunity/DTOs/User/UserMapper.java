@@ -12,4 +12,12 @@ public class UserMapper {
         );
     }
 
+    public static UserResponse toDTO(UserJPA userJPA) {
+        return new UserResponse(
+            userJPA.getName(),
+            userJPA.getEmail(),
+            userJPA.getRole(),
+            userJPA.getPassword()
+        );
+    }
 }

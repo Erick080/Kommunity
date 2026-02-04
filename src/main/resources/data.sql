@@ -1,5 +1,6 @@
 -- Limpa os dados existentes
 DELETE FROM events;
+DELETE FROM users;
 
 -- Insere eventos de teste
 INSERT INTO events (name, date, place, description) VALUES
@@ -14,3 +15,9 @@ INSERT INTO events (name, date, place, description) VALUES
 ('Open Source Festival', '2026-05-15 11:00:00', 'Porto Alegre', 'Festival de projetos open source'),
 ('Backend Engineering Meetup', '2026-06-01 18:00:00', 'São Paulo', 'Discussões avançadas sobre backend')
 ;
+
+-- Insere usuários de teste
+INSERT INTO users (name, email, password, role) VALUES
+('Erick Machado', 'erickbranquinhomachado@gmail.com', '$2a$12$jcnsdGtX4.ql/H0BvWxC/.7mlFp5mRgnEkGhmzQdWG/r0mq1S2giu', 'USER'),
+('Tiago Silva', 'tiagosilva@example.com', '$2a$12$12giWt0A.hWS1aY6evQYPOHrRiW2SKreRcINjDW/i16xMdeOkKFX.', 'USER'),
+('Oscar Flavio', 'oscarflaviojunior@gmail.com', '$2a$08$IJLDM4w3ncXDjQ7mUdqzgeSaJDS3feHPFObSJtPztLVJw2JvVLo5a', 'ADMIN')
