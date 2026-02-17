@@ -1,77 +1,68 @@
-# Kommunity - O Organizador de Eventos Open-Source 🚀
-<img src = "https://i.imgur.com/evW3RHA.png" alt = "Banner kommunity">
+# Kommunity - Backend
 
-Bem-vindo ao **Komunity**, a plataforma open-source definitiva para a criação e compartilhamento de eventos públicos! 🎉
+Backend de uma plataforma de eventos sociais inspirada em soluções como Sympla, desenvolvida com Spring Boot.
 
-## 🔥 Sobre o Projeto
-
-O **Komunity** está sendo criado para facilitar a organização de eventos sem burocracia. Sem transações financeiras, o projeto é voltado para:
-
-- Encontros de carros 🏎️
-- Shows underground 🎸
-- Happy hours 🍻
-- Comemorações 🎊
-- Encontros para jogos
-
-Totalmente **gratuito, colaborativo e open-source**. Junte-se a nós e ajude a construir algo incrível!
+A aplicação permite cadastro de usuários, criação e gerenciamento de eventos e integração com banco de dados relacional. O projeto foi containerizado com Docker para facilitar a execução e o deploy.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Tecnologias Utilizadas
 
-✅ Cadastro de eventos com informações detalhadas (data, local, descrição, imagens)  
-✅ Compartilhamento fácil via link ou QR Code  
-✅ Sistema de inscrição e lista de participantes  
-✅ Notificações para os inscritos  
-✅ Integração com redes sociais  
-✅ Suporte a tags e categorias para eventos  
-✅ Interface moderna e responsiva  
-✅ API pública para desenvolvedores  
-✅ Possibilidade de encontros privados ou públicos, com controle de pessoas!
+- Java 17+
+- Spring Boot
+- Spring Data JPA
+- Spring Security
+- PostgreSQL
+- Docker
+- Maven
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 📌 Visão Geral da Aplicação
 
-O **Komunity** é pensado para se tornar um game-changer, para isso, estamos buscando as tecnologias que melhor nos atendem!
+O sistema foi desenvolvido seguindo uma arquitetura RESTful, utilizando boas práticas como:
 
-_(O projeto está em constante evolução! Sinta-se livre para contribuir 🤝)_
+- Separação em camadas (Controller, Service, Repository)
+- Uso de DTOs para transporte de dados
+- Persistência com JPA/Hibernate
+- Criptografia de senhas com BCrypt
+- Configuração de CORS
+- Containerização com Docker
+- Autenticação com JWT
+- Documentação de endpoints com Swagger
 
 ---
 
-## 🎯 Objetivo do Projeto
+## 👤 Funcionalidades
 
-Nosso objetivo é criar uma ferramenta poderosa para organizadores de eventos, eliminando barreiras e tornando a experiência mais acessível para todos. Queremos democratizar a organização de eventos!
+### Usuários
+- Cadastro de usuário
+- Criptografia de senha no banco
+- Autenticação
+
+### Eventos
+- Criação de eventos
+- Listagem de eventos
+- Consulta de evento
+
+Todos endpoints da aplicação são documentados pelo swagger e podem ser conferidos em ```<URI_DA_APLICACAO>/swagger-ui.html```.
 
 ---
 
-## 👨‍💻 Como Contribuir?
+## 🗄️ Banco de Dados
 
-💡 **1. Dê um fork no repositório**  
-💾 **2. Clone o projeto**
+- Banco: PostgreSQL
+- Mapeamento via JPA/Hibernate
+
+---
+
+## 🐳 Execução de Deploy
+
 
 ```bash
- git clone https://github.com/OscarFlaviojr/kommunity.git
+docker-compose up --build
 ```
 
-⚙️ **3. Instale as dependências**
-
-🚀 **4. Rode a aplicação**
-
-📢 **5. Envie um pull request com suas melhorias!**
-
----
-
-## 🎨 Design
-
-Estamos focados em um design clean, intuitivo e fácil de usar. Se você é designer e quer contribuir, ficaremos felizes em receber sugestões! ✨
-
----
-
-## 📢 Contato e Comunidade
-
-Junte-se à nossa comunidade no Discord para discutir ideias, sugerir melhorias e colaborar no desenvolvimento!
-
----
-
-**Vamos juntos revolucionar a organização de eventos! 🔥**
+## Execução Local
+* Iniciar primeiro o BD: ``docker compose --env-file [nome do arquivo .env] up -d postgres``
+* Depois iniciar o Spring Boot: ``./mvnw spring-boot:run``
