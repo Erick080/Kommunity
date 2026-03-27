@@ -1,11 +1,19 @@
 package koala.kommunity.DTOs.Event;
 
 import java.time.LocalDateTime;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class CreateEventRequest {
+    @NotBlank(message = "Nome é obrigatório")
     String name;
+
+    @NotNull(message = "Data é obrigatória")
     LocalDateTime date;
+
+    @NotBlank(message = "Local é obrigatório")
     String place;
+
     String description;
     
     public CreateEventRequest(String name, LocalDateTime date, String place, String description) {

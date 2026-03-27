@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 import java.util.ArrayList;
 
 import koala.kommunity.DTOs.Event.CreateEventRequest;
@@ -24,11 +26,6 @@ public class EventController {
     public EventController(EventService eventService){
         this.eventService = eventService;
     }
-    
-    @GetMapping("/")
-    public String test(){
-        return "test events";
-    }
 
     @GetMapping("/all")
     public ArrayList<EventResponse> getAllEvents(){
@@ -43,7 +40,7 @@ public class EventController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<EventResponse> createEvent(@RequestBody CreateEventRequest request){
+    public ResponseEntity<EventResponse> createEvent(@Valid @RequestBody CreateEventRequest request){
         return ResponseEntity.ok(eventService.createEvent(request));
     }
 }

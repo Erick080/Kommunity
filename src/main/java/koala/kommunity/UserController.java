@@ -20,11 +20,6 @@ public class UserController {
     public UserController(UserService userService){
         this.userService = userService;
     }
-    
-    @GetMapping("/")
-    public String test(){
-        return "test users";
-    }
 
     @PostMapping("/create")
     public EnumCreateUserResult createUser(@RequestBody CreateUserRequest request){
