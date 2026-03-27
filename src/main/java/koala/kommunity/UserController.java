@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 import koala.kommunity.DTOs.User.CreateUserRequest;
 import koala.kommunity.DTOs.User.EnumCreateUserResult;
 import koala.kommunity.Services.UserService;
@@ -22,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/create")
-    public EnumCreateUserResult createUser(@RequestBody CreateUserRequest request){
+    public EnumCreateUserResult createUser(@Valid @RequestBody CreateUserRequest request){
         return userService.createUser(request);
     }
 }
